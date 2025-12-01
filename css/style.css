@@ -20,6 +20,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;      /* allow header items to wrap on smaller screens - Courtney Buttler */
+    gap: 1rem;            /* space between logo and nav when they wrap - Courtney Buttler */
 }
 
 .logo {
@@ -31,13 +33,21 @@ header {
     font-size: 1.4rem;
     font-weight: bold;
     display: flex;            
-    align-items: center;      
+    align-items: center;
+    gap: 0.5rem;              /* space between logo image and text - Courtney Buttler */      
+}
+
+/* keep logo image from getting huge on small screens - Courtney Buttler */
+.logo img {
+    max-height: 40px;
+    width: auto;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 1.2rem;
+    flex-wrap: wrap;          /* allow nav links to wrap instead of overflowing - Courtney Buttler */
 }
 
 nav a {
